@@ -7,6 +7,7 @@
     flex-direction: column;
     align-items: center;
     font-family: "lora", serif;
+    color:black;
 }
 .headerTitlessm{
     position: absolute;
@@ -20,7 +21,11 @@
 }
 .headerImage{
     width:100%;
-    height:450px;
-    margin-top: 80px;
+    height:300px;
+    margin-top: 0px;
     object-fit: cover;
+}
+.headerLogo{
+    position: absolute;
+    margin-bottom: 100px;
 }

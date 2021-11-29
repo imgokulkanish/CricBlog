@@ -5,6 +5,7 @@ import Write from "./pages/write/Write";
 import Settings from "./pages/settings/Settings";
 import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
+import About from "./pages/about/About";
 import {
   BrowserRouter as Router,
   Switch,
@@ -13,6 +14,7 @@ import {
 } from "react-router-dom";
 
 function App() {
+  const user = false;
   return (
     <Router>
       <Topbar/>
@@ -20,17 +22,20 @@ function App() {
         <Route exact path="/">
           <Home/>
         </Route>
+        <Route path="/about">
+          <About/>
+        </Route>
         <Route path="/register">
-          <Register/>
+          {user ? <Home/> : <Register/>}
         </Route>
         <Route path="/login">
-          <Login/>
+          {user ? <Home/>:<Login/>}
         </Route>
         <Route path="/write">
-          <Write/>
+          {user ? <Write/> : <Register/>}
         </Route>
         <Route path="/settings">
-          <Settings/>
+          {user ? <Settings/> : <Register/>}
         </Route>
         <Route path="/post/:postId">
           <Single/>
