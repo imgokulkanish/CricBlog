@@ -6,7 +6,7 @@ import logo from "../assets/logo.png"
 
 export default function Topbar() {
     const { user, dispatch } = useContext(Context);
-
+    const PF = "http://localhost:5000/images/"
     const handleLogout = () => {
         dispatch({ type: "LOGOUT" });
       };
@@ -38,7 +38,7 @@ export default function Topbar() {
                 {
                     user ? (
                         <Link to="./settings">
-                            <img className="topImg"src={user.profilePic} alt=""/>
+                            <img className="topImg"src={PF + user.profilePic} alt=""/>
                         </Link>
                         ) : (
                         <ul className="topList">
