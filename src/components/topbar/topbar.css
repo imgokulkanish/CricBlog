@@ -28,6 +28,7 @@
     height:50px;
     border-radius: 100%;
     object-fit: contain;
+    cursor: pointer;
 }
 .topList{
     display: flex;
